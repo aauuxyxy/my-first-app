@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CommonModule } from '@angular/common';
+import { ProductRoutingModule } from './product-routing.module';
 
-
-const routes: Routes = [
-    { path: '', component: ProductListComponent },
-    { path: 'detail', component: ProductDetailComponent },
-];
 
 @NgModule({
     declarations: [
@@ -16,7 +11,7 @@ const routes: Routes = [
         ProductDetailComponent,
     ],
     imports: [
-        RouterModule.forChild(routes),
+        ProductRoutingModule,
         CommonModule
     ],
     providers: [],
