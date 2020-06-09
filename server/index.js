@@ -3,13 +3,13 @@ const app = express();
 const mongoose = require("mongoose");
 const config = require("./config/dev");
 const FakeDb = require("./fake-db");
+const productRouter = require("./routes/products")
 
 
 
 //---- products表示リクエスト時の挙動（res）
-app.get('/products',function(req,res){
-    res.json({'success': true});
-});
+app.use("/api/v1/products", productRouter);
+
 
 //---- マングースでMongoDBと接続
 mongoose.connect(config.DB_URI,{

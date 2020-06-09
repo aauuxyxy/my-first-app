@@ -6,6 +6,8 @@ max = 最大文字数
 
 */
 
+// mongooseによるデータの　取り出し/保存　スキーマ（このモジュールをインポートすると、変数にmongoDBのデータが入ります。）
+
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
